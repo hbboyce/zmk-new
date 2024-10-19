@@ -138,10 +138,10 @@
 
         Mouse {
             bindings = <
-&trans  &msc SCROLL_UP    &msc SCROLL_LEFT  &mmv MOVE_UP    &msc SCROLL_RIGHT  &mkp MB5       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &msc SCROLL_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mkp MB4       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(Z)         &kp LG(X)         &kp LG(C)       &kp LG(P)          &kp LG(LS(Z))  &trans  &trans  &trans  &trans  &trans  &trans
-                                            &mkp MB3        &mkp LCLK          &mkp RCLK      &trans  &trans  &trans
+&trans  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB5       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB4       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(P)        &kp LG(LS(Z))  &trans  &trans  &trans  &trans  &trans  &trans
+                                        &mkp MB3        &mkp LCLK        &mkp RCLK      &trans  &trans  &trans
             >;
 
             label = "MOUSE";
