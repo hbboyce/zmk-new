@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
     chosen {
@@ -34,7 +35,7 @@
 &none  &kp X           &kp C           &kp L               &kp F             &kp V          &kp SEMICOLON  &kp SQT            &kp U                &kp P            &kp Q            &none
 &none  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LEFT_CONTROL N  &mt LEFT_SHIFT T  &kp G          &kp COMMA      &mt RIGHT_SHIFT A  &mt RIGHT_CONTROL E  &mt RIGHT_ALT H  &mt RIGHT_GUI I  &none
 &none  &kp Z           &kp W           &kp M               &kp D             &kp B          &kp PERIOD     &kp O              &kp Y                &kp K            &kp J            &none
-                                       &lt 3 DELETE        &lt 1 BACKSPACE   &lt 2 ENTER    &kp RET        &lt 4 SPACE        &lt 5 ESCAPE
+                                       &lt 3 DELETE        &lt 1 BACKSPACE   &lt 2 ENTER    &lt 6 TAB      &lt 4 SPACE        &lt 5 ESCAPE
             >;
         };
 
@@ -85,10 +86,10 @@
 
         Navigation {
             bindings = <
-&trans  &kp PAGE_UP    &kp HOME        &kp UP_ARROW  &kp END          &kp INSERT      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp CAPSLOCK    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp K_UNDO     &kp K_CUT       &kp K_COPY    &kp K_PASTE      &kp K_REDO      &trans  &trans  &trans  &trans  &trans  &trans
-                                       &kp DELETE    &kp BACKSPACE    &kp RETURN      &trans  &trans  &trans
+&trans  &kp PAGE_UP    &kp HOME        &kp UP_ARROW  &kp END          &kp INSERT       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp CAPSLOCK     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Z)      &kp LG(X)       &kp LG(C)     &kp LG(V)        &kp LG(LS(Z))    &trans  &trans  &trans  &trans  &trans  &trans
+                                       &kp DELETE    &kp BACKSPACE    &kp RETURN       &trans  &trans  &trans
             >;
 
             label = "NAV";
@@ -107,10 +108,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(P)  &kp LG(LS(Z))    &trans  &trans  &trans  &trans  &trans  &trans
+                              &mkp MCLK  &mkp LCLK  &mkp RCLK        &trans  &trans  &trans
             >;
 
             label = "MOUSE";
