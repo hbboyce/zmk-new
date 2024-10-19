@@ -34,7 +34,7 @@
 &none  &kp X           &kp C           &kp L               &kp F             &kp V          &kp SEMICOLON  &kp SQT            &kp U                &kp P            &kp Q            &none
 &none  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LEFT_CONTROL N  &mt LEFT_SHIFT T  &kp G          &kp COMMA      &mt RIGHT_SHIFT A  &mt RIGHT_CONTROL E  &mt RIGHT_ALT H  &mt RIGHT_GUI I  &none
 &none  &kp Z           &kp W           &kp M               &kp D             &kp B          &kp PERIOD     &kp O              &kp Y                &kp K            &kp J            &none
-                                       &kp LGUI            &lt 1 BACKSPACE   &lt 2 ENTER    &kp RET        &lt 2 SPACE        &kp RALT
+                                       &lt 3 DELETE        &lt 1 BACKSPACE   &lt 2 ENTER    &kp RET        &lt 2 SPACE        &kp RALT
             >;
         };
 
@@ -74,10 +74,10 @@
 
         Function {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PRINTSCREEN  &kp F7     &kp F8     &kp F9  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp SCROLLLOCK   &kp F4     &kp F5     &kp F6  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PAUSE_BREAK  &kp F1     &kp F2     &kp F3  &kp F10  &trans
+                        &trans  &trans  &trans    &kp TAB          &kp SPACE  &kp K_APP
             >;
         };
     };
