@@ -108,8 +108,8 @@
 
         Mouse {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &mkp MB5         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &mkp MB4         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(P)  &kp LG(LS(Z))    &trans  &trans  &trans  &trans  &trans  &trans
                               &mkp MCLK  &mkp LCLK  &mkp RCLK        &trans  &trans  &trans
             >;
