@@ -47,7 +47,34 @@
   };
 };
 
+&lt {
+    quick-tap-ms = <200>;
+};
+
 / {
+    behaviors {
+        lh_pht: left_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release = true;
+            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34>;    // <---[[right-hand keys]]
+        };
+        rh_pht: right_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release = true;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29>;    // <---[[right-hand keys]]
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,10 +88,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp V           &kp L           &kp H               &kp K             &kp Q          &kp J      &kp F              &kp O                &kp U            &kp COMMA        &none
-&none  &mt LEFT_GUI S  &mt LEFT_ALT R  &mt LEFT_CONTROL N  &mt LEFT_SHIFT T  &kp W          &kp Y      &mt RIGHT_SHIFT C  &mt RIGHT_CONTROL A  &mt RIGHT_ALT E  &mt RIGHT_GUI I  &none
-&none  &kp Z           &kp X           &kp M               &kp D             &kp B          &kp P      &kp G              &kp SQT              &kp SEMICOLON    &kp PERIOD       &none
-                                       &lt 3 DELETE        &lt 1 BACKSPACE   &lt 2 ENTER    &lt 6 TAB  &lt 4 SPACE        &lt 5 ESCAPE
+&none  &kp V               &kp L               &kp H                   &kp K                 &kp Q          &kp J      &kp F                  &kp O                    &kp U                &kp COMMA            &none
+&none  &lh_pht LEFT_GUI S  &lh_pht LEFT_ALT R  &lh_pht LEFT_CONTROL N  &lh_pht LEFT_SHIFT T  &kp W          &kp Y      &rh_pht RIGHT_SHIFT C  &rh_pht RIGHT_CONTROL A  &rh_pht RIGHT_ALT E  &rh_pht RIGHT_GUI I  &none
+&none  &kp Z               &kp X               &kp M                   &kp D                 &kp B          &kp P      &kp G                  &kp SQT                  &kp SEMICOLON        &kp PERIOD           &none
+                                               &lt 3 DELETE            &lt 1 BACKSPACE       &lt 2 ENTER    &lt 6 TAB  &lt 4 SPACE            &lt 5 ESCAPE
             >;
         };
 
