@@ -54,8 +54,7 @@
             label = "SL_NAV";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
+            tapping-term-ms = <0>;
             bindings
                 = <&macro_tap &kp K_CANCEL>
                 , <&macro_press &sl FUN>
