@@ -32,6 +32,7 @@
     behaviors {
         lsk: lazy_sticky_key {
             compatible = "zmk,behavior-sticky-key";
+            label = "LAZY_STICKY_KEY";
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <3000>;
@@ -42,6 +43,7 @@
 
         sm: sticky_mod {
             compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_MOD";
             #binding-cells = <2>;
             bindings = <&kp>, <&lsk>;
             flavor = "balanced";
