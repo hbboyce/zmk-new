@@ -146,56 +146,38 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "DHORF";
-
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
-&none  &none  &kp L  &kp H  &kp K   &kp Q                   &kp J          &kp F           &kp O      &kp U       &kp COMMA  &none
-&none  &kp V  &kp R  &kp N  &kp T   &kp W                   &kp Y          &kp C           &kp A      &kp E       &kp SQT    &none
-&none  &kp S  &kp X  &kp M  &kp D   &kp B                   &kp P          &kp G           &kp COMMA  &kp PERIOD  &kp I      &none
-                     &none  &slfun  &lt NUMSYM BACKSPACE    &lt NAV SPACE  &sk LEFT_SHIFT  &none
+                &none  &none  &kp L  &kp H  &kp K   &kp Q                     &kp J          &kp F           &kp O      &kp U       &kp COMMA  &none
+                &none  &kp V  &kp R  &kp N  &kp T   &kp W                     &kp Y          &kp C           &kp A      &kp E       &kp SQT    &none
+                &none  &kp S  &kp X  &kp M  &kp D   &kp B                     &kp P          &kp G           &kp COMMA  &kp PERIOD  &kp I      &none
+                                     &none  &slfun  &lt NUMSYM BACKSPACE      &lt NAV SPACE  &sk LEFT_SHIFT  &none
             >;
         };
 
         Numbers {
-            display-name = "NUMSYM";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&none  &none            &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp TILDE    &kp QUESTION     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
-&none  &kp EXCLAMATION  &kp CARET    &kp AMPS  &kp UNDERSCORE  &kp GRAVE    &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &none
-&none  &kp PERCENT      &kp PIPE     &kp BSLH  &kp LA(LS(2))   &none        &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS   &none
-                                     &none     &none           &none        &kp KP_NUMBER_0  &kp DOT &none
+                &none  &none            &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp TILDE      &kp QUESTION     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
+                &none  &kp EXCLAMATION  &kp CARET    &kp AMPS  &kp UNDERSCORE  &kp GRAVE      &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &none
+                &none  &kp PERCENT      &kp PIPE     &kp BSLH  &kp LA(LS(2))   &none          &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS   &none
+                                                     &none     &none           &none          &kp KP_NUMBER_0  &kp DOT &none
             >;
         };
 
         Navigation {
-            display-name = "NAV";
             bindings = <
-&none  &none          &kp HOME        &kp UP_ARROW  &kp END          &none         &none  &none      &none       &none         &none         &none
-&none  &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp LG(Z)     &none  &kp ENTER  &kp ESCAPE  &kp LEFT_ALT  &none         &none
-&none  &kp PAGE_DOWN  &kp LG(X)       &kp LG(C)     &kp LG(V)        &none         &none  &none      &none       &none         &kp LEFT_GUI  &none
-                                      &none         &kp TAB          &kp DELETE    &none  &none      &none
+                &none  &none          &kp HOME        &kp UP_ARROW  &kp END          &none           &none  &none      &none       &none         &none         &none
+                &none  &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp LG(Z)       &none  &kp ENTER  &kp ESCAPE  &kp LEFT_ALT  &none         &none
+                &none  &kp PAGE_DOWN  &kp LG(X)       &kp LG(C)     &kp LG(V)        &none           &none  &none      &none       &none         &kp LEFT_GUI  &none
+                                                      &none         &kp TAB          &kp DELETE      &none  &none      &none
             >;
         };
 
         Function {
-            display-name = "FUN";
             bindings = <
-&none  &none   &kp F6     &kp F7     &kp F8     &kp F9     &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3  &none         &none  
-&none  &kp F5  &kp F2     &kp F3     &kp F4     &kp LG(Z)  &none         &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &bt BT_CLR    &none
-&none  &kp F1  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none      &none         &none             &none           &none         &kp LEFT_GUI  &none
-                          &none      &none      &none      &none         &none             &none
+                &none  &none   &kp F6     &kp F7     &kp F8     &kp F9                               &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3  &none         &none  
+                &none  &kp F5  &kp F2     &kp F3     &kp F4     &kp LG(Z)                            &none         &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &bt BT_CLR    &none
+                &none  &kp F1  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none                                &none         &none             &none           &none         &kp LEFT_GUI  &none
+                                          &none      &none      &none                                &none         &none             &none
             >;    
         };
     };
