@@ -32,7 +32,6 @@
     behaviors {
         lsk: lazy_sticky_key {
             compatible = "zmk,behavior-sticky-key";
-            label = "LAZY_STICKY_KEY";
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <3000>;
@@ -43,7 +42,6 @@
 
         sm: sticky_mod {
             compatible = "zmk,behavior-hold-tap";
-            label = "STICKY_MOD";
             #binding-cells = <2>;
             bindings = <&kp>, <&lsk>;
             flavor = "balanced";
@@ -69,73 +67,73 @@
     combos {
         compatible = "zmk,combos";
         combo_z {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <26 27>;
             bindings = <&kp Z>;
             layers = <MAIN>;
         };
         combo_j {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <3 4>;
             bindings = <&kp J>;
             layers = <MAIN>;
         };
         combo_q {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <7 8>;
             bindings = <&kp Q>;
             layers = <MAIN>;
         };
         combo_lparens {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <15 16>;
             bindings = <&kp LEFT_PARENTHESIS>;
             layers = <MAIN>;
         };
         combo_rparens {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <19 20>;
             bindings = <&kp RIGHT_PARENTHESIS>;
             layers = <MAIN>;
         };
         combo_lbracket {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <14 15>;
             bindings = <&kp LEFT_BRACKET>;
             layers = <MAIN>;
         };
         combo_rbracket {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <20 21>;
             bindings = <&kp RIGHT_BRACKET>;
             layers = <MAIN>;
         };
         combo_lbrace {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <27 28>;
             bindings = <&kp LEFT_BRACE>;
             layers = <MAIN>;
         };
         combo_rbrace {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <31 32>;
             bindings = <&kp RIGHT_BRACE>;
             layers = <MAIN>;
         };
         combo_semicolon {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <32 33>;
             bindings = <&kp SEMICOLON>;
             layers = <MAIN>;
         };
         combo_divide {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <7 8>;
             bindings = <&kp KP_DIVIDE>;
             layers = <NUMSYM>;
         };
         combo_asterisk {
-            timemout-ms = <combo_timeout>;
+            timeout-ms = <combo_timeout>;
             key-positions = <8 9>;
             bindings = <&kp ASTERISK>;
             layers = <NUMSYM>;
