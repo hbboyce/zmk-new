@@ -122,7 +122,7 @@
             bindings = <&kp RIGHT_BRACE>;
             layers = <MAIN>;
         };
-        combo_rbrace {
+        combo_semicolon {
             timemout-ms = <combo_timeout>;
             key-positions = <32 33>;
             bindings = <&kp SEMICOLON>;
