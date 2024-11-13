@@ -116,9 +116,9 @@
 
         default_layer {
             bindings = <
-                &none   &none   &kp L   &kp H   &kp K     &kp Q                &kp J           &kp F       &kp O       &kp U     &none     &none
-                &none   &kp V   &kp R   &kp N   &kp T     &kp W                &kp Y           &kp C       &kp A       &kp E     &kp SQT   &none
-                &none   &kp S   &kp X   &kp M   &kp D     &kp B                &kp P           &kp G       &kp COMMA   &kp DOT   &kp I     &none
+                &none   &none   &kp L   &kp H   &kp K     &kp W                &kp Y           &kp F       &kp O       &kp U     &none     &none
+                &none   &kp V   &kp R   &kp N   &kp T     &kp B                &kp P           &kp C       &kp A       &kp E     &kp SQT   &none
+                &none   &kp S   &kp X   &kp M   &kp D     &none                &none           &kp G       &kp COMMA   &kp DOT   &kp I     &none
                                         &none   &sl FUN   &lt NUMSYM BSPC      &lt NAV SPACE   &sk LSHFT   &none
             >;
         };
